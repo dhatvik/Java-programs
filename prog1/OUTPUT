@@ -1,0 +1,31 @@
+List First 3 Contacts
+Enter name: 
+Dhatvik
+Enter Number: 
+6362688458
+Enter name: 
+Kavan
+Enter Number: 
+6362690510
+Enter name: 
+Ankith
+Enter Number: 
+8660937838
+Initial Contact List 
+{6362690510=Kavan, 6362688458=Dhatvik, 8660937838=Ankith}
+Type a number for missed call
+6362690510
+Type a number for missed call
+8217263545
+Type a number for missed call
+8197404003
+Missed calls in order 
+Number: 6362690510 Name: Kavan
+Number: 8217263545 Name: Private Number
+Number: 8197404003 Name: Private Number
+Enter the number for Deletion
+8660937838
+Befor Deletion: 
+{6362690510=Kavan, 6362688458=Dhatvik, 8660937838=Ankith}
+After Deletion
+{6362690510=Kavan, 6362688458=Dhatvik}
