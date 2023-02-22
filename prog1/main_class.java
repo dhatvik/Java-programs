@@ -45,6 +45,24 @@ public class main_class {
 			missed_call.get(i).display();
 		}
 		
+		System.out.println("Enter the number to check missed call");
+		long missed_number =sc.nextLong();
+		int flag = 0;
+		for(miss_call c: missed_call)
+		{
+			if(c.number == missed_number){
+				flag=1;
+				break;
+			}
+		}
+		if(flag==1)
+		{
+			System.out.println("Missed call came from given Number");
+		}
+		else{
+			System.out.println("No missed Call");
+		}
+		
 		System.out.println("Enter the number for Deletion");
 		long number =sc.nextLong();
 		if(contacts.containsKey(number))
@@ -61,7 +79,10 @@ public class main_class {
 			System.out.println(contacts);
 		}
 		
+	
+		
 		sc.close();
+		
 	}
 
 }
