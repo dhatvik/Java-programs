@@ -1,0 +1,89 @@
+package tem;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class SampleWindow extends JFrame implements ActionListener{
+	JFrame jf = new JFrame("New Window");
+	JPanel jp=new JPanel();
+	JLabel jl1 =new JLabel("Enter the First Number");
+	JTextField jtf1=new JTextField(20);
+	JLabel jl2 =new JLabel("Enter the First Number");
+	JTextField jtf2=new JTextField(20);
+	JButton jb1=new JButton("Addition");
+	JButton jb2=new JButton("Subtraction");
+	JButton jb3=new JButton("Multiplication");
+	JButton jb4=new JButton("Division");
+
+	JLabel jl3 =new JLabel("Result Of Addition");
+	JTextField jtf3=new JTextField(20);
+
+	JLabel jl4 =new JLabel("Result Of Subtraction");
+	JTextField jtf4=new JTextField(20);
+	
+
+	JLabel jl5 =new JLabel("Result Of Multiplication");
+	JTextField jtf5=new JTextField(20);
+	
+
+	JLabel jl6 =new JLabel("Result Of Division");
+	JTextField jtf6=new JTextField(20);
+	int a;
+	int b;
+	SampleWindow()
+	{
+		jf.setSize(500,500);
+		jf.add(jp);
+		jp.add(jl1);
+		jp.add(jtf1);
+		jp.add(jl2);
+		jp.add(jtf2);
+		jp.add(jb1);
+		jp.add(jb2);
+		jp.add(jb3);
+		jp.add(jb4);
+		jb1.addActionListener(this);
+		jb2.addActionListener(this);
+		jb3.addActionListener(this);
+		jb4.addActionListener(this);
+		jp.add(jl3);
+		jp.add(jtf3);
+		jp.add(jl4);
+		jp.add(jtf4);
+		jp.add(jl5);
+		jp.add(jtf5);
+		jp.add(jl6);
+		jp.add(jtf6);
+		jf.setVisible(true);
+	}
+	public static void main(String[] args)
+	{
+		SampleWindow sw =new SampleWindow();
+	}
+	public void actionPerformed(ActionEvent ae)
+	{
+		float res;
+		a=Integer.parseInt(jtf1.getText());
+		b=Integer.parseInt(jtf2.getText());
+        if(ae.getSource()==jb1)
+        {
+        	res=a+b;
+        	jtf3.setText(String.valueOf(res));
+        }
+        else if(ae.getSource()==jb2)
+        {
+        	res=a-b;
+        	jtf4.setText(String.valueOf(res));
+        }
+        else if(ae.getSource()==jb3)
+        {
+        	res=a*b;
+        	jtf5.setText(String.valueOf(res));
+        }
+        else if(ae.getSource()==jb4)
+        {
+        	res=a/b;
+        	jtf6.setText(String.valueOf(res));
+        }
+		
+	}
+}
